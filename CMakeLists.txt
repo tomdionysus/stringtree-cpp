@@ -22,11 +22,6 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_library(
-  stringtree
-  src/stringtree.cpp
-)
-
 enable_testing()
 
 add_executable(
@@ -36,7 +31,6 @@ add_executable(
 target_link_libraries(
   stringtree_test
   GTest::gtest_main
-  stringtree
 )
 
 include(GoogleTest)
